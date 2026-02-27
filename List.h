@@ -1,6 +1,4 @@
 #pragma once
-#include <bits/stdc++.h>
-
 /// @brief 顺序表
 /// @tparam T 元素类型
 template <class T>
@@ -16,5 +14,5 @@ class list
         virtual int search(const T &x) const = 0;
         virtual T visit(int i) const = 0;
         virtual void traverse() const = 0;
-        
+
 };

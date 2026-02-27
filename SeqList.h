@@ -14,7 +14,7 @@ class seqList : public list <T>
         int length() const;
         void insert(int i, const T &x);
         T visit(int i) const;
-        void remove();
+        void remove(int i);
         int search(const T &x) const;
         void traverse() const;
 };

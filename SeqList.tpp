@@ -1,4 +1,4 @@
-#include "SeqList.h"
+using namespace std;
 
 template <class T>
 void seqList<T> :: clear()
@@ -36,7 +36,7 @@ seqList<T> :: seqList(int initsize)
     currentlength = 0;
 }
 template<class T>
-int seqList<T> :: search(T &x) const
+int seqList<T> :: search(const T &x) const
 {
     for (int i = 0; i < currentlength; ++i)
     {

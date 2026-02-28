@@ -1,3 +1,23 @@
 {
-  "c-cpp-compile-run.output-location": "${workspaceFolder}"
+  "c-cpp-compile-run.output-location": "${workspaceFolder}",
+  "files.encoding": "utf8",
+  "terminal.integrated.detectLocale": "on",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell (UTF-8)": {
+      "source": "PowerShell",
+      "args": [
+        "-NoExit",
+        "-Command",
+        "chcp 65001 > $null"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell (UTF-8)",
+  "editor.tabCompletion": "on",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestOnTriggerCharacters": true
 }

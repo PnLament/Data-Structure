@@ -95,3 +95,31 @@ void sLinkList<T>::traverse() const
     }
     std::cout << std::endl;
 }
+template<class T>
+void sLinkList<T>::erase(int i)
+{
+    if (i < 0 || i >= currentlength) {
+        throw std::out_of_range("erase: index out of range");
+    }
+
+    T target = move(i)->data;
+    node* prev = head;
+    node* curr = head->next;
+
+    while (curr != nullptr)
+    {
+        if (curr->data == target)
+        {
+            node* del = curr;
+            curr = curr->next;
+            prev->next = curr;
+            delete del;
+            --currentlength;        //不要忘记！
+        }
+        else
+        {
+            prev = curr;
+            curr = curr->next;
+        }
+    }
+}

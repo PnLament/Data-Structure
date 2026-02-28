@@ -31,7 +31,7 @@ class sLinkList : public list<T>
         void traverse() const;
         T visit(int i) const;
         int length() const {return currentlength;};
-
+        void erase(int i);
 
 
 };
